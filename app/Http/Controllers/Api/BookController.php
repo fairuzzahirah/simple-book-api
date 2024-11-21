@@ -20,11 +20,17 @@ class BookController extends Controller
     public function index()
     {
         $books = $this->database->getReference('books')->getValue();
+        if (empty($books)) {
+            return response()->json([
+                'message' => 'No books found',
+                'data' => []
+            ], 200);
+        }
     
         $formattedBooks = [];
         foreach ($books as $key => $book) {
             $formattedBooks[] = [
-                'id' => $key,  
+                'id' => $key,
                 'title' => $book['title'],
                 'author' => $book['author'],
                 'published_at' => $book['published_at'],

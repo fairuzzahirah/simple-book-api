@@ -18,3 +18,4 @@ yarn-error.log
 /.vscode
 generatekey.json
 firebasetest.js
+.vercel
