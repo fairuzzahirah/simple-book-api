@@ -78,3 +78,9 @@ Feel free to reach out with questions or suggestions:
 - Name: Fairuz Zahirah Abhista
 - Email: fairuzza.fza@gmail.com
 - GitHub: https://github.com/fairuzzahirah/
+
+## Contact 
+Feel free to reach out with questions or suggestions:
+- Name: Fairuz Zahirah Abhista
+- Email: fairuzza.fza@gmail.com
+- GitHub: https://github.com/fairuzzahirah/
