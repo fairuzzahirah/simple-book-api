@@ -1,0 +1,4 @@
+vendor
+.vercel
+.vscode
+node_modules
