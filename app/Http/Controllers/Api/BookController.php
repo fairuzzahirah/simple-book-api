@@ -27,17 +27,17 @@ class BookController extends Controller
             ], 200);
         }
     
-        $formattedBooks = [];
-        foreach ($books as $key => $book) {
-            $formattedBooks[] = [
+        $formattedBooks = array_map(function($book, $key) {
+            return [
                 'id' => $key,
-                'title' => $book['title'],
-                'author' => $book['author'],
-                'published_at' => $book['published_at'],
-                'created_at' => $book['created_at'],
-                'updated_at' => $book['updated_at'],
+                'title' => $book['title'] ?? null, // Ensures key exists, or null if not
+                'author' => $book['author'] ?? null,
+                'published_at' => $book['published_at'] ?? null,
+                'created_at' => $book['created_at'] ?? null,
+                'updated_at' => $book['updated_at'] ?? null,
             ];
-        }
+        }, $books, array_keys($books));
+        
     
         return response()->json([
             'data' => $formattedBooks
